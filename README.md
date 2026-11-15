@@ -1,0 +1,17 @@
+# Van Stock Pro — Preview
+
+This repository is isolated from the live Van Stock Pro repository.
+
+## Safety boundary
+- This preview must connect only to a dedicated Supabase test project.
+- Never copy the live project's URL or publishable key into this repository.
+- Never use a Supabase service-role key in browser code.
+- Do not merge or deploy preview changes to production without explicit approval.
+
+## Supabase preview setup
+1. Create a separate Supabase project for testing.
+2. In `supabase-config.js`, replace the two placeholders with that test project's Project URL and publishable (or anon) key.
+3. Apply the preview schema/migrations to the test project only.
+4. Add the preview site's URL to the test project's Authentication URL configuration.
+
+Until a separate test project is configured, sign-in and cloud data features are intentionally unavailable. Do not use production credentials as a workaround.
